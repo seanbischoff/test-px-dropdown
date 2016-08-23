@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+
+	<link rel="stylesheet" type="text/css" href="bower_components/angular-ui-grid/ui-grid.min.css">
+	<script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-touch/angular-touch.js"></script>
+
+	<link rel="import" href="bower_components/px-dropdown/px-dropdown.html"/>
+
+	<script src="app.js"></script>
+
+	
+	<style>
+		.grid { width: 500px; height:250px }
+	</style>
+
+</head>
+<body>
+	<div ng-controller="MainCtrl">
+		
+		<div id="multiAction">
+		<select>
+		<option ng-repeat="option in options" value="{{option.value}}">{{option.label}}</option>
+		</select>
+		</div>
+
+<px-dropdown display-value="Text" id="sean">
+  <px-dropdown-content class="px-dropdown-content" max-cont-character-width="10"
+  extend-dropdown="true" extend-dropdown-by="15" items='[{"key":"one", "val": "One"}, {"key":"two", "val": "Two"}, {"key":"three", "val": "Three"}, {"key":"four", "val": "How now brown cow"}]'>
+  </px-dropdown-content>
+</px-dropdown>
+
+
+		<div id="grid1" ui-grid="gridOptions" class="grid" ui-grid-selection ></div>
+	</div>
+
+<!-- <script>
+Polymer({
+	is:'px-dropdown',
+	listeners: {
+      'dropdown_flip': '_flipOpened',
+      'dropdown_content_value_changed': '_newTextValue'
+    },
+    _newTextValue: function(evt) {
+      console.log('changed');
+      console.log(evt);
+      //this.set('value', evt.detail.textValue);
+      //this.set('displayValue',evt.detail.textValue);
+      //this.set('selectedKey', evt.detail.key);
+
+      this.fire('change');
+
+      evt.stopPropagation();
+    }
+
+});
+</script> -->
+
+</body>
+</html>

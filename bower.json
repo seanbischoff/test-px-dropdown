@@ -1,0 +1,21 @@
+{
+  "name": "sample-aui-grid",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Sean Bischoff"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "^0.7.22",
+    "px-dropdown": "https://github.com/PredixDev/px-dropdown.git#^0.11.2"
+  }
+}
